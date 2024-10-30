@@ -1,0 +1,80 @@
+1. Double profile under session:
+    Steps to reproduce: 
+        Given The user opens a browser and navitgates to lobotics page
+        And The user clicks on the conference button 
+        And The user clicks on the session button
+        And The sessions page is visible
+        And The user filters per day on wednesday
+        And The user scrolls to the session "Accessibility 101 Level: Introductory and overview"
+
+    Expected result:
+        Only 1 profile is present under the session
+
+    Actual result:
+        There were 2 profiles is present under the session
+
+        
+2. Empty sessions were visible:
+    Steps to reproduce: 
+        Given The user opens a browser and navitgates to lobotics page
+        And The user clicks on the conference button 
+        And The user clicks on the session button
+        And The sessions page is visible
+        And The user filters per day on All session
+        And The user scrolls to the bottom of the session page  
+
+    Expected result:
+        There are no sessions visible that dont have a day and/or a profile attached to it
+
+    Actual result:
+        There were 3 sessions that did not have a day/roomnumber/profile present 
+
+
+3. Grammar error:
+    Steps to reproduce: 
+        Given The user opens a browser and navitgates to lobotics page
+        And The user clicks on the conference button 
+        And The user clicks on the session button
+        And The sessions page is visible
+        And The user filters per day on All session
+
+    Expected result:
+        The 's after the name is written correctly, see documentation at: https://grammarist.com/punctuation/apostrophe-after-s-rules-and-examples/
+
+    Actual result:
+        The 's was not correctly written for example the profile of Erik Peters was written as Erik Peters's instead of Peters'
+
+
+4. Session not visible after creation:
+    Steps to reproduce:
+        Given The user opens a browser and navitgates to lobotics page
+        And The user clicks on the conference button
+        And The user clicks on the session button
+        And The sessions page is visible
+        And The user clicks on the create_session button
+        And The create_session page is visible
+        And The user fills in all the required fields
+        Then The user clicks on the submit_session button
+    
+    Expected result:
+        The created session is visible on the sessions page
+
+    Actual result:
+        The created session not visible on the sessions page
+
+
+5. Redundant field in session creation:
+    Steps to reproduce:
+        Given The user opens a browser and navitgates to lobotics page
+        And The user clicks on the conference button
+        And The user clicks on the session button
+        And The sessions page is visible
+        And The user clicks on the create_session button
+        And The create_session page is visible
+        Then The user fills in all the required fields
+        
+    Expected result:
+        The required fields correspondent to the text boxes on the sessions page
+
+    Actual result:
+        The description field is present at the creation but it is not shown in the session pages
