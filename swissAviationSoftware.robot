@@ -11,7 +11,7 @@ ${home_page}                 .main-logo
 ${aboutUs_button}            //a[contains(text(),'About Us')]
 ${amos_button}               //a[@href="/amos-mro"]
 ${customers_button}          //a[@href="/customers"]
-${openPositions_button}      //a[@href="https://swissas.teamtailor.com/"]
+${openPositions_button}      //*[contains(text(),'Open positions')]
 
 ### About us page
 ${aboutUs_page}              id=block-sas-2017-content   
@@ -24,8 +24,10 @@ ${amosetl_button}            //a[contains(text(),'AMOSeTL')]
 ${customers_page}            //*[contains(text(),'Loyal AMOS community')]  
 
 ### Open positions page
-${openPositions_page}        //*[contains(text(),'Loyal AMOS community')]  
-
+${openPositions_page}        //*[contains(text(),'We are hiring!')]
+${jobOpenings_button}        //a[@href="#jobs"]   #//*[contains(text(),'Job openings')]  
+${jobOpenings_page}          //*[contains(text(),'Software Test Engineer')]
+${testEngineer_button}       //*[contains(text(),'Software Test Engineer')]
 
 
 *** Test Cases ***
@@ -48,27 +50,39 @@ Scenario 1: Navigate through Swiss Aviation Software page
 Scenario 2: Apply at Swiss Aviation Software
     Given A browser has been opened
     When The user navigates to the Swiss Aviation Software page    
+    And The user clicks on the cookies button
     And The user verifies if openPositions button is visible
-    And The user clicks on the openPositions button 
-    And The user verifies if open openPositions page is visible
-
-
+    And The user clicks on the openPositions button
+    And The user clicks on the cookies button
+    And The user verifies if openPositions page is visible
+    And The user verifies if jobOpenings button is visible
+    And The user clicks on the jobOpenings button 
+    And The user verifies if jobOpenings page is visible
+    And The user verifies if testEngineer button is visible
+    And The user clicks on the testEngineer button
 
 
 *** Keywords ***
 A browser has been opened
     New Browser    ${BROWSER}    headless=False    slowMo=0:00:2
+    New Context    viewport={'width': 1920, 'height': 1080}
+
 
 The user navigates to the Swiss Aviation Software page    
     New Page    ${URL}
 
 The user clicks on the ${string} button
-    Click   ${${string}_button}
-
+    IF    "${string}" == "jobOpenings"
+        Click   ${${string}_button}
+    ELSE
+        Click   ${${string}_button}
+    END
+    
 The user verifies if ${string} ${second} is ${state}
     IF    "${second}" == "page"
         Wait For Elements State    ${${string}_page}    ${state}
     ELSE
+        # Scroll To Element    ${${string}_button}
         Wait For Elements State    ${${string}_button}    ${state}
     END  
     
