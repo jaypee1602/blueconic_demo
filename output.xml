@@ -1,29 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.1.1 (Python 3.12.6 on win32)" generated="2024-11-19T16:39:24.849584" rpa="false" schemaversion="5">
-<suite id="s1" name="Lobomantics" source="c:\git\blueconic_demo\lobomantics.robot">
-<test id="s1-t1" name="Scenario 10: Open Browser and Click customers" line="123">
+<robot generator="Robot 7.1.1 (Python 3.12.6 on win32)" generated="2024-11-20T16:29:53.674262" rpa="false" schemaversion="5">
+<suite id="s1" name="swissAviationSoftware" source="c:\git\blueconic_demo\swissAviationSoftware.robot">
+<test id="s1-t1" name="Scenario 1: Navigate through Swiss Aviation Software page" line="47">
 <kw name="Given A browser has been opened">
 <kw name="New Browser" owner="Browser">
-<msg time="2024-11-19T16:39:25.241076" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 2000.0, "timeout": 30000.0, "tracesDir": "C:\\git\\blueconic_demo\\browser\\traces\\bb52efc8-7379-425e-aee6-40a8ed5006da"}</msg>
-<msg time="2024-11-19T16:39:25.320608" level="INFO">Starting Browser process C:\Users\Gebruiker\AppData\Local\Programs\Python\Python312\Lib\site-packages\Browser\wrapper\index.js using port 57248</msg>
-<msg time="2024-11-19T16:39:25.321610" level="INFO">Node startup parameters: ['node', 'C:\\Users\\Gebruiker\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\Browser\\wrapper\\index.js', '57248']</msg>
-<msg time="2024-11-19T16:39:27.685437" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":2000,"timeout":30000,"tracesDir":"C:\\git\\blueconic_demo\\browser\\traces\\bb52efc8-7379-425e-aee6-40a8ed5006da"}</msg>
-<arg>${BROWSER}</arg>
+<msg time="2024-11-20T16:29:54.055288" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\git\\blueconic_demo\\browser\\traces\\d8a00e0f-b2e4-4c3e-8bf6-6c115964da14"}</msg>
+<msg time="2024-11-20T16:29:54.126246" level="INFO">Starting Browser process C:\Users\Gebruiker\AppData\Local\Programs\Python\Python312\Lib\site-packages\Browser\wrapper\index.js using port 52464</msg>
+<msg time="2024-11-20T16:29:54.126246" level="INFO">Node startup parameters: ['node', 'C:\\Users\\Gebruiker\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\Browser\\wrapper\\index.js', '52464']</msg>
+<msg time="2024-11-20T16:29:56.274143" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\git\\blueconic_demo\\browser\\traces\\d8a00e0f-b2e4-4c3e-8bf6-6c115964da14"}</msg>
+<arg>chromium</arg>
 <arg>headless=False</arg>
-<arg>slowMo=0:00:2</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new playwright Browser with specified options.</doc>
-<status status="PASS" start="2024-11-19T16:39:25.238118" elapsed="2.447319"/>
+<status status="PASS" start="2024-11-20T16:29:54.053249" elapsed="2.224895"/>
 </kw>
-<status status="PASS" start="2024-11-19T16:39:25.237107" elapsed="2.449333"/>
-</kw>
-<kw name="When The user navigates to the lobotics page">
 <kw name="New Page" owner="Browser">
-<msg time="2024-11-19T16:39:34.303049" level="INFO">Keyword 'Take Screenshot  fail-screenshot-{index}' could not be run on failure:
+<msg time="2024-11-20T16:30:07.312278" level="INFO">Keyword 'Take Screenshot  fail-screenshot-{index}' could not be run on failure:
 Error: Tried to take screenshot, but no page was open.</msg>
-<msg time="2024-11-19T16:39:34.303049" level="INFO">See also file:///C:/git/blueconic_demo/playwright-log-1732030765155438600.txt for additional details.</msg>
-<msg time="2024-11-19T16:39:34.304052" level="FAIL">Error: page.goto: Target page, context or browser has been closed
+<msg time="2024-11-20T16:30:07.313261" level="INFO">See also file:///C:/git/blueconic_demo/playwright-log.txt for additional details.</msg>
+<msg time="2024-11-20T16:30:07.314275" level="FAIL">TimeoutError: page.goto: Timeout 10000ms exceeded.
 Call log:
   - navigating to "https://www.swiss-as.com/", waiting until "load"
 </msg>
@@ -31,28 +27,75 @@ Call log:
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Open a new Page.</doc>
-<status status="FAIL" start="2024-11-19T16:39:27.720439" elapsed="6.595661">Error: page.goto: Target page, context or browser has been closed
+<status status="FAIL" start="2024-11-20T16:29:56.278144" elapsed="11.049139">TimeoutError: page.goto: Timeout 10000ms exceeded.
 Call log:
   - navigating to "https://www.swiss-as.com/", waiting until "load"
 </status>
 </kw>
-<status status="FAIL" start="2024-11-19T16:39:27.719439" elapsed="6.596661">Error: page.goto: Target page, context or browser has been closed
+<kw name="Go To" owner="Browser">
+<arg>${URL}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Navigates to the given ``url``.</doc>
+<status status="NOT RUN" start="2024-11-20T16:30:07.327283" elapsed="0.004979"/>
+</kw>
+<kw name="Wait For Load State" owner="Browser">
+<arg>state=load</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits that the page reaches the required load state.</doc>
+<status status="NOT RUN" start="2024-11-20T16:30:07.333261" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2024-11-20T16:29:54.052254" elapsed="13.282010">TimeoutError: page.goto: Timeout 10000ms exceeded.
 Call log:
   - navigating to "https://www.swiss-as.com/", waiting until "load"
 </status>
 </kw>
-<kw name="And The user accepts cookies">
-<status status="NOT RUN" start="2024-11-19T16:39:34.317049" elapsed="0.000000"/>
+<kw name="When The user navigates to the Swiss Aviation Software page">
+<status status="NOT RUN" start="2024-11-20T16:30:07.347259" elapsed="0.000000"/>
 </kw>
-<kw name="And The user clicks on Customers">
-<status status="NOT RUN" start="2024-11-19T16:39:34.318050" elapsed="0.000000"/>
+<kw name="And The user verifies if cookies button is visible" source_name="The user verifies if ${string} ${second} is ${state}">
+<status status="NOT RUN" start="2024-11-20T16:30:07.351256" elapsed="0.000000"/>
 </kw>
-<status status="FAIL" start="2024-11-19T16:39:25.235072" elapsed="9.083979">Error: page.goto: Target page, context or browser has been closed
+<kw name="And The user clicks on the cookies button" source_name="The user clicks on the ${string} button">
+<status status="NOT RUN" start="2024-11-20T16:30:07.356260" elapsed="0.000000"/>
+</kw>
+<kw name="And The user verifies if home page is visible" source_name="The user verifies if ${string} ${second} is ${state}">
+<status status="NOT RUN" start="2024-11-20T16:30:07.357257" elapsed="0.001001"/>
+</kw>
+<kw name="And The user verifies if aboutUs button is visible" source_name="The user verifies if ${string} ${second} is ${state}">
+<status status="NOT RUN" start="2024-11-20T16:30:07.363259" elapsed="0.000998"/>
+</kw>
+<kw name="And The user clicks on the aboutUs button" source_name="The user clicks on the ${string} button">
+<status status="NOT RUN" start="2024-11-20T16:30:07.364257" elapsed="0.000998"/>
+</kw>
+<kw name="And The user verifies if aboutUs page is visible" source_name="The user verifies if ${string} ${second} is ${state}">
+<status status="NOT RUN" start="2024-11-20T16:30:07.366257" elapsed="0.000000"/>
+</kw>
+<kw name="And The user verifies if amos button is visible" source_name="The user verifies if ${string} ${second} is ${state}">
+<status status="NOT RUN" start="2024-11-20T16:30:07.367254" elapsed="0.000000"/>
+</kw>
+<kw name="And The user clicks on the amos button" source_name="The user clicks on the ${string} button">
+<status status="NOT RUN" start="2024-11-20T16:30:07.369259" elapsed="0.000000"/>
+</kw>
+<kw name="And The user verifies if amos page is visible" source_name="The user verifies if ${string} ${second} is ${state}">
+<status status="NOT RUN" start="2024-11-20T16:30:07.370259" elapsed="0.000998"/>
+</kw>
+<kw name="And The user verifies if customers button is visible" source_name="The user verifies if ${string} ${second} is ${state}">
+<status status="NOT RUN" start="2024-11-20T16:30:07.374257" elapsed="0.000000"/>
+</kw>
+<kw name="And The user clicks on the customers button" source_name="The user clicks on the ${string} button">
+<status status="NOT RUN" start="2024-11-20T16:30:07.376260" elapsed="0.001008"/>
+</kw>
+<kw name="Then The user verifies if customers page is visible" source_name="The user verifies if ${string} ${second} is ${state}">
+<status status="NOT RUN" start="2024-11-20T16:30:07.378258" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2024-11-20T16:29:54.051249" elapsed="13.328009">TimeoutError: page.goto: Timeout 10000ms exceeded.
 Call log:
   - navigating to "https://www.swiss-as.com/", waiting until "load"
 </status>
 </test>
-<status status="FAIL" start="2024-11-19T16:39:24.859098" elapsed="9.528501"/>
+<status status="FAIL" start="2024-11-20T16:29:53.683263" elapsed="13.785549"/>
 </suite>
 <statistics>
 <total>
@@ -61,7 +104,7 @@ Call log:
 <tag>
 </tag>
 <suite>
-<stat pass="0" fail="1" skip="0" id="s1" name="Lobomantics">Lobomantics</stat>
+<stat pass="0" fail="1" skip="0" id="s1" name="swissAviationSoftware">swissAviationSoftware</stat>
 </suite>
 </statistics>
 <errors>
