@@ -1,0 +1,58 @@
+{"level":30,"time":"2024-11-19T15:07:52.188Z","pid":6140,"hostname":"Micro3050","msg":"Listening on 56154"}
+(node:6140) DeprecationWarning: Calling start() is no longer necessary. It can be safely omitted.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+{"level":30,"time":"2024-11-19T15:07:52.633Z","pid":6140,"hostname":"Micro3050","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2024-11-19T15:07:53.263Z","pid":6140,"hostname":"Micro3050","msg":"Adding browser to stack: chromium, version: 130.0.6723.31"}
+{"level":30,"time":"2024-11-19T15:07:53.263Z","pid":6140,"hostname":"Micro3050","msg":"End of node method newBrowser"}
+{"level":30,"time":"2024-11-19T15:07:53.263Z","pid":6140,"hostname":"Micro3050","msg":"Adding 0 contexts to browser"}
+{"level":30,"time":"2024-11-19T15:07:53.434Z","pid":6140,"hostname":"Micro3050","msg":"Start of node method newPage"}
+{"level":30,"time":"2024-11-19T15:07:53.434Z","pid":6140,"hostname":"Micro3050","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2024-11-19T15:07:53.508Z","pid":6140,"hostname":"Micro3050","msg":"Changed active context"}
+{"level":30,"time":"2024-11-19T15:07:54.091Z","pid":6140,"hostname":"Micro3050","msg":"Video path: undefined"}
+{"level":30,"time":"2024-11-19T15:07:54.092Z","pid":6140,"hostname":"Micro3050","msg":"Changed active page"}
+{"level":30,"time":"2024-11-19T15:08:06.118Z","pid":6140,"hostname":"Micro3050","msg":"Error of node method  newPage"}
+================= Original suppressed error =================
+page.goto: Timeout 10000ms exceeded.
+Call log:
+  [2m- navigating to "https://www.swiss-as.com/", waiting until "load"[22m
+
+    at newPage (C:\Users\Gebruiker\AppData\Local\Programs\Python\Python312\Lib\site-packages\Browser\wrapper\index.js:11281:18)
+    at async PlaywrightServer.newPage (C:\Users\Gebruiker\AppData\Local\Programs\Python\Python312\Lib\site-packages\Browser\wrapper\index.js:11611:28) {
+  name: 'TimeoutError'
+}
+=============================================================
+================= Original suppressed error =================
+Error: Tried to take screenshot, but no page was open.
+    at exists (C:\Users\Gebruiker\AppData\Local\Programs\Python\Python312\Lib\site-packages\Browser\wrapper\index.js:9508:11)
+    at takeScreenshot (C:\Users\Gebruiker\AppData\Local\Programs\Python\Python312\Lib\site-packages\Browser\wrapper\index.js:9552:3)
+    at PlaywrightServer.takeScreenshot (C:\Users\Gebruiker\AppData\Local\Programs\Python\Python312\Lib\site-packages\Browser\wrapper\index.js:11611:34)
+    at Object.onReceiveHalfClose (C:\Users\Gebruiker\AppData\Local\Programs\Python\Python312\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:1425:25)
+    at BaseServerInterceptingCall.maybePushNextMessage (C:\Users\Gebruiker\AppData\Local\Programs\Python\Python312\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:569:31)
+    at BaseServerInterceptingCall.handleEndEvent (C:\Users\Gebruiker\AppData\Local\Programs\Python\Python312\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:609:14)
+    at ServerHttp2Stream.<anonymous> (C:\Users\Gebruiker\AppData\Local\Programs\Python\Python312\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:376:18)
+    at ServerHttp2Stream.emit (node:events:530:35)
+    at endReadableNT (node:internal/streams/readable:1698:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+=============================================================
+{"level":30,"time":"2024-11-19T15:08:06.240Z","pid":6140,"hostname":"Micro3050","msg":"Start of node method takeScreenshot"}
+{"level":30,"time":"2024-11-19T15:08:06.241Z","pid":6140,"hostname":"Micro3050","msg":"Error of node method  takeScreenshot"}
+{"level":30,"time":"2024-11-19T15:08:06.316Z","pid":6140,"hostname":"Micro3050","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2024-11-19T15:08:06.317Z","pid":6140,"hostname":"Micro3050","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2024-11-19T15:08:06.321Z","pid":6140,"hostname":"Micro3050","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2024-11-19T15:08:06.322Z","pid":6140,"hostname":"Micro3050","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2024-11-19T15:08:06.326Z","pid":6140,"hostname":"Micro3050","msg":"Changed active context"}
+{"level":30,"time":"2024-11-19T15:08:06.330Z","pid":6140,"hostname":"Micro3050","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2024-11-19T15:08:06.330Z","pid":6140,"hostname":"Micro3050","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2024-11-19T15:08:06.334Z","pid":6140,"hostname":"Micro3050","msg":"Start of node method switchBrowser"}
+{"level":30,"time":"2024-11-19T15:08:06.334Z","pid":6140,"hostname":"Micro3050","msg":"End of node method switchBrowser"}
+{"level":30,"time":"2024-11-19T15:08:06.336Z","pid":6140,"hostname":"Micro3050","msg":"Start of node method switchBrowser"}
+{"level":30,"time":"2024-11-19T15:08:06.337Z","pid":6140,"hostname":"Micro3050","msg":"End of node method switchBrowser"}
+{"level":30,"time":"2024-11-19T15:08:06.344Z","pid":6140,"hostname":"Micro3050","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2024-11-19T15:08:06.344Z","pid":6140,"hostname":"Micro3050","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2024-11-19T15:08:06.347Z","pid":6140,"hostname":"Micro3050","msg":"Changed active context"}
+{"level":30,"time":"2024-11-19T15:08:06.348Z","pid":6140,"hostname":"Micro3050","msg":"Start of node method closeContext"}
+{"level":30,"time":"2024-11-19T15:08:06.362Z","pid":6140,"hostname":"Micro3050","msg":"End of node method closeContext"}
+{"level":30,"time":"2024-11-19T15:08:06.369Z","pid":6140,"hostname":"Micro3050","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2024-11-19T15:08:06.369Z","pid":6140,"hostname":"Micro3050","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2024-11-19T15:08:08.412Z","pid":6140,"hostname":"Micro3050","msg":"Start of node method closeAllBrowsers"}
+{"level":30,"time":"2024-11-19T15:08:08.679Z","pid":6140,"hostname":"Micro3050","msg":"End of node method closeAllBrowsers"}

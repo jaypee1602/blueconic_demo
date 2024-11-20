@@ -1,0 +1,64 @@
+{"level":30,"time":"2024-11-19T15:23:30.084Z","pid":7744,"hostname":"Micro3050","msg":"Listening on 56760"}
+(node:7744) DeprecationWarning: Calling start() is no longer necessary. It can be safely omitted.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+{"level":30,"time":"2024-11-19T15:23:30.526Z","pid":7744,"hostname":"Micro3050","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2024-11-19T15:23:31.013Z","pid":7744,"hostname":"Micro3050","msg":"Adding browser to stack: chromium, version: 130.0.6723.31"}
+{"level":30,"time":"2024-11-19T15:23:31.014Z","pid":7744,"hostname":"Micro3050","msg":"End of node method newBrowser"}
+{"level":30,"time":"2024-11-19T15:23:31.013Z","pid":7744,"hostname":"Micro3050","msg":"Adding 0 contexts to browser"}
+{"level":30,"time":"2024-11-19T15:23:31.037Z","pid":7744,"hostname":"Micro3050","msg":"Start of node method newPage"}
+{"level":30,"time":"2024-11-19T15:23:31.038Z","pid":7744,"hostname":"Micro3050","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2024-11-19T15:23:31.077Z","pid":7744,"hostname":"Micro3050","msg":"Changed active context"}
+{"level":30,"time":"2024-11-19T15:23:31.671Z","pid":7744,"hostname":"Micro3050","msg":"Video path: undefined"}
+{"level":30,"time":"2024-11-19T15:23:31.672Z","pid":7744,"hostname":"Micro3050","msg":"Changed active page"}
+{"level":30,"time":"2024-11-19T15:23:41.550Z","pid":7744,"hostname":"Micro3050","msg":"End of node method newPage"}
+{"level":30,"time":"2024-11-19T15:23:41.578Z","pid":7744,"hostname":"Micro3050","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2024-11-19T15:23:41.579Z","pid":7744,"hostname":"Micro3050","msg":"Strict mode is enabled, find Locator with //*[@id=\"popup-buttons\"]/button[1] in page."}
+{"level":30,"time":"2024-11-19T15:23:41.635Z","pid":7744,"hostname":"Micro3050","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2024-11-19T15:23:41.644Z","pid":7744,"hostname":"Micro3050","msg":"Start of node method click"}
+{"level":30,"time":"2024-11-19T15:23:41.645Z","pid":7744,"hostname":"Micro3050","msg":"Strict mode is enabled, find Locator with //*[@id=\"popup-buttons\"]/button[1] in page."}
+{"level":30,"time":"2024-11-19T15:23:43.784Z","pid":7744,"hostname":"Micro3050","msg":"End of node method click"}
+{"level":30,"time":"2024-11-19T15:23:43.811Z","pid":7744,"hostname":"Micro3050","msg":"Start of node method click"}
+{"level":30,"time":"2024-11-19T15:23:43.811Z","pid":7744,"hostname":"Micro3050","msg":"Strict mode is enabled, find Locator with //a[@href=\"/contact\" and @data-drupal-link-system-path=\"node/76\"] in page."}
+{"level":30,"time":"2024-11-19T15:23:45.877Z","pid":7744,"hostname":"Micro3050","msg":"Error of node method  click"}
+================= Original suppressed error =================
+locator.click: Error: strict mode violation: locator('//a[@href="/contact" and @data-drupal-link-system-path="node/76"]') resolved to 2 elements:
+    1) <a href="/contact" data-drupal-link-system-path="node/76">Contacts</a> aka getByRole('link', { name: 'Contacts' })
+    2) <a href="/contact" class="link icon-after" data-drupal-link-system-path="node/76">Get in touch</a> aka getByRole('link', { name: 'Get in touch' })
+
+Call log:
+  [2m- waiting for locator('//a[@href="/contact" and @data-drupal-link-system-path="node/76"]')[22m
+
+    at internalClick (C:\Users\Gebruiker\AppData\Local\Programs\Python\Python312\Lib\site-packages\Browser\wrapper\index.js:10575:19)
+    at async click (C:\Users\Gebruiker\AppData\Local\Programs\Python\Python312\Lib\site-packages\Browser\wrapper\index.js:10556:18)
+    at async PlaywrightServer.click (C:\Users\Gebruiker\AppData\Local\Programs\Python\Python312\Lib\site-packages\Browser\wrapper\index.js:11611:28)
+=============================================================
+{"level":30,"time":"2024-11-19T15:23:45.927Z","pid":7744,"hostname":"Micro3050","msg":"Start of node method takeScreenshot"}
+{"level":30,"time":"2024-11-19T15:23:45.928Z","pid":7744,"hostname":"Micro3050","Take screenshot with options: ":{"path":"C:\\git\\blueconic_demo\\browser\\screenshot\\fail-screenshot-1.png","fileType":"png","fullPage":false,"timeout":10000,"omitBackground":false}}
+{"level":30,"time":"2024-11-19T15:23:46.196Z","pid":7744,"hostname":"Micro3050","msg":"End of node method takeScreenshot"}
+{"level":30,"time":"2024-11-19T15:23:46.222Z","pid":7744,"hostname":"Micro3050","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2024-11-19T15:23:46.226Z","pid":7744,"hostname":"Micro3050","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2024-11-19T15:23:46.229Z","pid":7744,"hostname":"Micro3050","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2024-11-19T15:23:46.232Z","pid":7744,"hostname":"Micro3050","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2024-11-19T15:23:46.236Z","pid":7744,"hostname":"Micro3050","msg":"Changed active context"}
+{"level":30,"time":"2024-11-19T15:23:46.236Z","pid":7744,"hostname":"Micro3050","msg":"Changing current active page: page=08f98cd3-dd18-4386-9c06-6694476b3c69"}
+{"level":30,"time":"2024-11-19T15:23:46.236Z","pid":7744,"hostname":"Micro3050","msg":"Changed active page"}
+{"level":30,"time":"2024-11-19T15:23:46.243Z","pid":7744,"hostname":"Micro3050","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2024-11-19T15:23:46.245Z","pid":7744,"hostname":"Micro3050","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2024-11-19T15:23:46.248Z","pid":7744,"hostname":"Micro3050","msg":"Start of node method switchBrowser"}
+{"level":30,"time":"2024-11-19T15:23:46.249Z","pid":7744,"hostname":"Micro3050","msg":"End of node method switchBrowser"}
+{"level":30,"time":"2024-11-19T15:23:46.252Z","pid":7744,"hostname":"Micro3050","msg":"Start of node method switchBrowser"}
+{"level":30,"time":"2024-11-19T15:23:46.252Z","pid":7744,"hostname":"Micro3050","msg":"End of node method switchBrowser"}
+{"level":30,"time":"2024-11-19T15:23:46.256Z","pid":7744,"hostname":"Micro3050","msg":"Changing current active page: page=08f98cd3-dd18-4386-9c06-6694476b3c69"}
+{"level":30,"time":"2024-11-19T15:23:46.256Z","pid":7744,"hostname":"Micro3050","msg":"Changed active page"}
+{"level":30,"time":"2024-11-19T15:23:46.261Z","pid":7744,"hostname":"Micro3050","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2024-11-19T15:23:46.264Z","pid":7744,"hostname":"Micro3050","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2024-11-19T15:23:46.266Z","pid":7744,"hostname":"Micro3050","msg":"Changed active context"}
+{"level":30,"time":"2024-11-19T15:23:46.266Z","pid":7744,"hostname":"Micro3050","msg":"Changing current active page: page=08f98cd3-dd18-4386-9c06-6694476b3c69"}
+{"level":30,"time":"2024-11-19T15:23:46.266Z","pid":7744,"hostname":"Micro3050","msg":"Changed active page"}
+{"level":30,"time":"2024-11-19T15:23:46.270Z","pid":7744,"hostname":"Micro3050","msg":"Start of node method closeContext"}
+{"level":30,"time":"2024-11-19T15:23:46.289Z","pid":7744,"hostname":"Micro3050","msg":"Removed page=0647cefc-122e-43fa-88db-3d1a6d0d15de from context=3a6411dc-282d-4ecd-9f69-d3d7c5b6521e page stack"}
+{"level":30,"time":"2024-11-19T15:23:46.370Z","pid":7744,"hostname":"Micro3050","msg":"End of node method closeContext"}
+{"level":30,"time":"2024-11-19T15:23:46.427Z","pid":7744,"hostname":"Micro3050","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2024-11-19T15:23:46.427Z","pid":7744,"hostname":"Micro3050","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2024-11-19T15:23:48.530Z","pid":7744,"hostname":"Micro3050","msg":"Start of node method closeAllBrowsers"}
+{"level":30,"time":"2024-11-19T15:23:48.774Z","pid":7744,"hostname":"Micro3050","msg":"End of node method closeAllBrowsers"}
