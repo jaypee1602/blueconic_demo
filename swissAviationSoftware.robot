@@ -4,8 +4,7 @@ Library    Browser
 *** Variables ***
 ${URL}                       https://www.swiss-as.com
 ${BROWSER}                   chromium
-
-
+${string}                    
 ### Homepage
 ${cookies_button}            //button[contains(text(),'Accept all cookies')]
 ${home_page}                 .main-logo
@@ -31,16 +30,32 @@ ${jobOpenings_page}          //*[contains(text(),'Software Test Engineer')]
 ${testEngineer_button}       //*[contains(text(),'Software Test Engineer')]
 
 ### Services page
-${services}       //a[@href="#services"]
-${customer_support}    //a[@href="#/services/customer-support"]  
-${technical_advisory}     //a[@href="#/services/technical-advisory"]  
-${project_management}  //a[@href="#/services/project-management"]  
-${business_consulting}   //a[@href="#/services/business-consulting"]  
-${training}    //a[@href="#/services/training"]  
-${data_migration}    //a[@href="#/services/data-transfer"]  
-${interfacing}    //a[@href="#/services/interfacing"]  
-${amos_application}    //a[@href="#/services/amos-operation-services"]  
-${system_customisation}   //a[@href="#/services/system-customisation"]  
+${services_button}       //a[@href="/services"]
+${customerSupport_button}    //a[@href="/services/customer-support" and contains(@class, "content-teaser-link")]
+${technicalAdvisory_button}    //a[@href="/services/technical-advisory"]
+${projectManagement_button}    //a[@href="/services/project-management"]  
+${businessConsulting_button}   //a[@href="/services/business-consulting"]  
+${training_button}    //a[@href="/services/training"]  
+${dataMigration_button}    //a[@href="/services/data-transfer"]  
+${interfacing_button}    //a[@href="/services/interfacing"]  
+${amosApplication_button}    //a[@href="/services/amos-operation-services"]  
+${systemCustomisation_button}   //a[@href="/services/system-customisation"]  
+
+### Contacts
+${contacts_ button}   //a[@href="/contact"] 
+
+### News and Events page
+${newsAndEvents_button}     //a[@href="/news-events"] 
+
+### Social media channels
+${linkedin_button}    //a[@href="http://www.linkedin.com/company/1371863?trk=NUS_CMPY_FOL-pdctd"]
+${facebook_button}    //a[@href="https://www.facebook.com/Swiss-Aviation-Software-787608771283227"]
+${x_button}           //a[@href="https://www.x.com/swiss_as"]
+${youtube_button}     //a[@href="https://www.youtube.com/channel/UCRBjtLC3YUpJ60pJT-R4dCg"]
+
+###  Privacy
+${privacy_ button}    //a[@href="/privacy-policy"]
+
 
 
 *** Test Cases ***
@@ -82,10 +97,16 @@ Scenario 3: Browse through Services at Swiss Aviation Software
     And The user verifies if home page is visible
     And The user verifies if services button is visible
     And The user clicks on the services button 
+    #And The user verifies if cookies button is visible
+    #And The user clicks on the cookies button
+    #And The user scrolls element into view
     And The user verifies if customerSupport button is visible
     And The user clicks on the customerSupport button
-    And The user verifies if technicalAdvisory is visible
-    And The user clicks on the technicalAdvisory button
+    And The user navigates to the Swiss Aviation Software page
+    And The user verifies if services button is visible
+    And The user clicks on the services button 
+    #And The user verifies if technicalAdvisory button is visible
+    #And The user clicks on the technicalAdvisory button
     And The user verifies if projectManagement button is visible
     And The user clicks on the projectManagement button 
     And The user verifies if businessConsulting button is visible
@@ -101,10 +122,76 @@ Scenario 3: Browse through Services at Swiss Aviation Software
     And The user verifies if systemCustomisation button is visible
     And The user clicks on the systemCustomisation button 
 
+Scenario 4: Navigate to contacts
+    Given A browser has been opened
+    When The user navigates to the Swiss Aviation Software page
+    And The user verifies if cookies button is visible
+    And The user clicks on the cookies button
+    And The user verifies if home page is visible
+    And The user scrolls element into view
+    And The user verifies if contacts button is visible
+    And The user clicks on the contacts button 
 
 
+Scenario 5: Navigate to news and events
+    Given A browser has been opened
+    When The user navigates to the Swiss Aviation Software page
+    And The user verifies if cookies button is visible
+    And The user clicks on the cookies button
+    And The user verifies if home page is visible
+    And The user scrolls element into view
+    And The user verifies if newsAndEvents button button is visible
+    And The user clicks on the newsAndEvents button 
     
+Scenario 6: Navigate to linkedin
+    Given A browser has been opened
+    When The user navigates to the Swiss Aviation Software page
+    And The user verifies if cookies button is visible
+    And The user clicks on the cookies button
+    And The user verifies if home page is visible
+    And The user scrolls element into view
+    And The user verifies if linkedinc button is visible
+    And The user clicks on the linkedin button 
 
+Scenario 7: Navigate to facebook
+    Given A browser has been opened
+    When The user navigates to the Swiss Aviation Software page
+    And The user verifies if cookies button is visible
+    And The user clicks on the cookies button
+    And The user verifies if home page is visible
+    And The user scrolls element into view
+    And The user verifies if facebook button button is visible
+    And The user clicks on the facebook button 
+
+Scenario 8: Navigate to x
+    Given A browser has been opened
+    When The user navigates to the Swiss Aviation Software page
+    And The user verifies if cookies button is visible
+    And The user clicks on the cookies button
+    And The user verifies if home page is visible
+    And The user scrolls element into view
+    And The user verifies if x button button is visible
+    And The user clicks on the x button 
+
+Scenario 9: Navigate to youtube
+    Given A browser has been opened
+    When The user navigates to the Swiss Aviation Software page
+    And The user verifies if cookies button is visible
+    And The user clicks on the cookies button
+    And The user verifies if home page is visible
+    And The user scrolls element into view
+    And The user verifies if youtube button is visible
+    And The user clicks on the youtube button 
+
+Scenario 10: Navigate to Privacy
+    Given A browser has been opened
+    When The user navigates to the Swiss Aviation Software page
+    And The user verifies if cookies button is visible
+    And The user clicks on the cookies button
+    And The user verifies if home page is visible
+    And The user scrolls element into view
+    And The user verifies if privacy button is visible
+    And The user clicks on the privacy button 
 
 
 *** Keywords ***
@@ -138,3 +225,5 @@ The user verifies if ${string} ${second} is ${state}
         Wait For Elements State    ${${string}_button}    ${state}
     END  
     
+The user scrolls element into view
+    Scroll To   ${string}
