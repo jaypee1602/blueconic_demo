@@ -1,69 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.1.1 (Python 3.12.6 on win32)" generated="2024-11-21T17:09:25.724604" rpa="false" schemaversion="5">
+<robot generator="Robot 7.1.1 (Python 3.12.6 on win32)" generated="2024-11-22T16:34:03.029487" rpa="false" schemaversion="5">
 <suite id="s1" name="swissAviationSoftware" source="c:\git\blueconic_demo\swissAviationSoftware.robot">
-<test id="s1-t1" name="Scenario 10: Navigate to Privacy" line="186">
+<test id="s1-t1" name="Scenario 1: Navigate through Swiss Aviation Software page" line="79">
 <kw name="Given A browser has been opened">
 <kw name="New Browser" owner="Browser">
-<msg time="2024-11-21T17:09:26.092316" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\git\\blueconic_demo\\browser\\traces\\65741fd9-e4f6-4774-b7a3-ee719a0a1071"}</msg>
-<msg time="2024-11-21T17:09:26.155844" level="INFO">Starting Browser process C:\Users\Gebruiker\AppData\Local\Programs\Python\Python312\Lib\site-packages\Browser\wrapper\index.js using port 49611</msg>
-<msg time="2024-11-21T17:09:26.156845" level="INFO">Node startup parameters: ['node', 'C:\\Users\\Gebruiker\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\Browser\\wrapper\\index.js', '49611']</msg>
-<msg time="2024-11-21T17:09:28.497857" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\git\\blueconic_demo\\browser\\traces\\65741fd9-e4f6-4774-b7a3-ee719a0a1071"}</msg>
+<msg time="2024-11-22T16:34:03.439860" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\git\\blueconic_demo\\browser\\traces\\e818f5c6-af4a-4c5b-9c0c-641a8f918d3a"}</msg>
+<msg time="2024-11-22T16:34:03.498270" level="INFO">Starting Browser process C:\Users\Gebruiker\AppData\Local\Programs\Python\Python312\Lib\site-packages\Browser\wrapper\index.js using port 52746</msg>
+<msg time="2024-11-22T16:34:03.498270" level="INFO">Node startup parameters: ['node', 'C:\\Users\\Gebruiker\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\Browser\\wrapper\\index.js', '52746']</msg>
+<msg time="2024-11-22T16:34:05.585330" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\git\\blueconic_demo\\browser\\traces\\e818f5c6-af4a-4c5b-9c0c-641a8f918d3a"}</msg>
 <arg>chromium</arg>
 <arg>headless=False</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new playwright Browser with specified options.</doc>
-<status status="PASS" start="2024-11-21T17:09:26.091319" elapsed="2.406538"/>
+<status status="PASS" start="2024-11-22T16:34:03.438823" elapsed="2.147508"/>
 </kw>
 <kw name="New Page" owner="Browser">
-<msg time="2024-11-21T17:09:30.543002" level="INFO">Successfully initialized new page object and opened url: https://www.swiss-as.com</msg>
-<msg time="2024-11-21T17:09:30.543986" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
+<msg time="2024-11-22T16:34:07.648706" level="INFO">Successfully initialized new page object and opened url: https://www.swiss-as.com</msg>
+<msg time="2024-11-22T16:34:07.648706" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
 <arg>${URL}</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Open a new Page.</doc>
-<status status="PASS" start="2024-11-21T17:09:28.498857" elapsed="2.045129"/>
+<status status="PASS" start="2024-11-22T16:34:05.586331" elapsed="2.063376"/>
 </kw>
 <kw name="Go To" owner="Browser">
-<msg time="2024-11-21T17:09:30.757153" level="INFO">Successfully opened URL https://www.swiss-as.com</msg>
+<msg time="2024-11-22T16:34:07.913005" level="INFO">Successfully opened URL https://www.swiss-as.com</msg>
 <arg>${URL}</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Navigates to the given ``url``.</doc>
-<status status="PASS" start="2024-11-21T17:09:30.544987" elapsed="0.212166"/>
+<status status="PASS" start="2024-11-22T16:34:07.649707" elapsed="0.263298"/>
 </kw>
 <kw name="Wait For Load State" owner="Browser">
-<msg time="2024-11-21T17:09:30.758569" level="INFO">Waiting page load to state to receive load in 10000.0</msg>
-<msg time="2024-11-21T17:09:30.770577" level="INFO">Load state load got in 10000</msg>
+<msg time="2024-11-22T16:34:07.915004" level="INFO">Waiting page load to state to receive load in 10000.0</msg>
+<msg time="2024-11-22T16:34:07.923004" level="INFO">Load state load got in 10000</msg>
 <arg>state=load</arg>
 <tag>PageContent</tag>
 <tag>Wait</tag>
 <doc>Waits that the page reaches the required load state.</doc>
-<status status="PASS" start="2024-11-21T17:09:30.757153" elapsed="0.014419"/>
+<status status="PASS" start="2024-11-22T16:34:07.914005" elapsed="0.008999"/>
 </kw>
-<status status="PASS" start="2024-11-21T17:09:26.090317" elapsed="4.682247"/>
+<status status="PASS" start="2024-11-22T16:34:03.437855" elapsed="4.485149"/>
 </kw>
 <kw name="When The user navigates to the Swiss Aviation Software page">
 <kw name="New Browser" owner="Browser">
-<msg time="2024-11-21T17:09:30.781559" level="INFO">Switching browser to browser=46714218-44a1-477e-9dbc-afd97188d04a</msg>
-<msg time="2024-11-21T17:09:30.795566" level="INFO">Successfully changed active browser: browser=46714218-44a1-477e-9dbc-afd97188d04a</msg>
-<msg time="2024-11-21T17:09:30.796561" level="INFO">Reusing existing browser with id: browser=46714218-44a1-477e-9dbc-afd97188d04a</msg>
+<msg time="2024-11-22T16:34:07.934008" level="INFO">Switching browser to browser=29dc1403-0b2b-41d9-a8b2-f380d5a614dd</msg>
+<msg time="2024-11-22T16:34:07.943003" level="INFO">Successfully changed active browser: browser=29dc1403-0b2b-41d9-a8b2-f380d5a614dd</msg>
+<msg time="2024-11-22T16:34:07.943003" level="INFO">Reusing existing browser with id: browser=29dc1403-0b2b-41d9-a8b2-f380d5a614dd</msg>
 <arg>chromium</arg>
 <arg>headless=False</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new playwright Browser with specified options.</doc>
-<status status="PASS" start="2024-11-21T17:09:30.780562" elapsed="0.015999"/>
+<status status="PASS" start="2024-11-22T16:34:07.932036" elapsed="0.010967"/>
 </kw>
 <kw name="New Page" owner="Browser">
-<msg time="2024-11-21T17:09:31.364532" level="INFO">Successfully initialized new page object and opened url: https://www.swiss-as.com</msg>
+<msg time="2024-11-22T16:34:08.475367" level="INFO">Successfully initialized new page object and opened url: https://www.swiss-as.com</msg>
 <arg>${URL}</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Open a new Page.</doc>
-<status status="PASS" start="2024-11-21T17:09:30.797560" elapsed="0.566972"/>
+<status status="PASS" start="2024-11-22T16:34:07.944006" elapsed="0.532363"/>
 </kw>
-<status status="PASS" start="2024-11-21T17:09:30.780562" elapsed="0.584969"/>
+<status status="PASS" start="2024-11-22T16:34:07.931009" elapsed="0.545360"/>
 </kw>
 <kw name="And The user verifies if cookies button is visible" source_name="The user verifies if ${string} ${second} is ${state}">
 <if>
@@ -74,25 +74,25 @@
 <tag>PageContent</tag>
 <tag>Wait</tag>
 <doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="NOT RUN" start="2024-11-21T17:09:31.397541" elapsed="0.000000"/>
+<status status="NOT RUN" start="2024-11-22T16:34:08.480371" elapsed="0.000000"/>
 </kw>
-<status status="NOT RUN" start="2024-11-21T17:09:31.396531" elapsed="0.001010"/>
+<status status="NOT RUN" start="2024-11-22T16:34:08.479371" elapsed="0.001000"/>
 </branch>
 <branch type="ELSE">
 <kw name="Wait For Elements State" owner="Browser">
-<msg time="2024-11-21T17:09:31.477060" level="INFO">Waited for Element with selector //button[contains(text(),'Accept all cookies')] at state visible</msg>
+<msg time="2024-11-22T16:34:08.574458" level="INFO">Waited for Element with selector //button[contains(text(),'Accept all cookies')] at state visible</msg>
 <arg>${${string}_button}</arg>
 <arg>${state}</arg>
 <tag>PageContent</tag>
 <tag>Wait</tag>
 <doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2024-11-21T17:09:31.398532" elapsed="0.079528"/>
+<status status="PASS" start="2024-11-22T16:34:08.481371" elapsed="0.093087"/>
 </kw>
-<status status="PASS" start="2024-11-21T17:09:31.397541" elapsed="0.080519"/>
+<status status="PASS" start="2024-11-22T16:34:08.481371" elapsed="0.093087"/>
 </branch>
-<status status="PASS" start="2024-11-21T17:09:31.396531" elapsed="0.081529"/>
+<status status="PASS" start="2024-11-22T16:34:08.479371" elapsed="0.095087"/>
 </if>
-<status status="PASS" start="2024-11-21T17:09:31.396531" elapsed="0.081529"/>
+<status status="PASS" start="2024-11-22T16:34:08.478376" elapsed="0.097085"/>
 </kw>
 <kw name="And The user clicks on the cookies button" source_name="The user clicks on the ${string} button">
 <if>
@@ -102,38 +102,38 @@
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="NOT RUN" start="2024-11-21T17:09:31.480062" elapsed="0.000000"/>
+<status status="NOT RUN" start="2024-11-22T16:34:08.576459" elapsed="0.001003"/>
 </kw>
-<status status="NOT RUN" start="2024-11-21T17:09:31.480062" elapsed="0.000000"/>
+<status status="NOT RUN" start="2024-11-22T16:34:08.576459" elapsed="0.001003"/>
 </branch>
 <branch type="ELSE">
 <kw name="Click" owner="Browser">
-<msg time="2024-11-21T17:09:31.482062" level="INFO">Clicks the element '//button[contains(text(),'Accept all cookies')]'.</msg>
+<msg time="2024-11-22T16:34:08.578462" level="INFO">Clicks the element '//button[contains(text(),'Accept all cookies')]'.</msg>
 <arg>${${string}_button}</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" start="2024-11-21T17:09:31.481060" elapsed="1.097948"/>
+<status status="PASS" start="2024-11-22T16:34:08.577462" elapsed="0.997578"/>
 </kw>
-<status status="PASS" start="2024-11-21T17:09:31.481060" elapsed="1.098914"/>
+<status status="PASS" start="2024-11-22T16:34:08.577462" elapsed="0.997578"/>
 </branch>
-<status status="PASS" start="2024-11-21T17:09:31.480062" elapsed="1.099912"/>
+<status status="PASS" start="2024-11-22T16:34:08.576459" elapsed="0.999580"/>
 </if>
-<status status="PASS" start="2024-11-21T17:09:31.479059" elapsed="1.100915"/>
+<status status="PASS" start="2024-11-22T16:34:08.576459" elapsed="0.999580"/>
 </kw>
 <kw name="And The user verifies if home page is visible" source_name="The user verifies if ${string} ${second} is ${state}">
 <if>
 <branch type="IF" condition="&quot;${second}&quot; == &quot;page&quot;">
 <kw name="Wait For Elements State" owner="Browser">
-<msg time="2024-11-21T17:09:32.602974" level="INFO">Waited for Element with selector .main-logo at state visible</msg>
+<msg time="2024-11-22T16:34:09.596559" level="INFO">Waited for Element with selector .main-logo at state visible</msg>
 <arg>${${string}_page}</arg>
 <arg>${state}</arg>
 <tag>PageContent</tag>
 <tag>Wait</tag>
 <doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2024-11-21T17:09:32.581972" elapsed="0.022001"/>
+<status status="PASS" start="2024-11-22T16:34:09.580037" elapsed="0.016522"/>
 </kw>
-<status status="PASS" start="2024-11-21T17:09:32.581972" elapsed="0.022001"/>
+<status status="PASS" start="2024-11-22T16:34:09.580037" elapsed="0.016522"/>
 </branch>
 <branch type="ELSE">
 <kw name="Wait For Elements State" owner="Browser">
@@ -142,30 +142,15 @@
 <tag>PageContent</tag>
 <tag>Wait</tag>
 <doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="NOT RUN" start="2024-11-21T17:09:32.603973" elapsed="0.000000"/>
+<status status="NOT RUN" start="2024-11-22T16:34:09.597559" elapsed="0.000000"/>
 </kw>
-<status status="NOT RUN" start="2024-11-21T17:09:32.603973" elapsed="0.001002"/>
+<status status="NOT RUN" start="2024-11-22T16:34:09.596559" elapsed="0.001000"/>
 </branch>
-<status status="PASS" start="2024-11-21T17:09:32.581972" elapsed="0.023003"/>
+<status status="PASS" start="2024-11-22T16:34:09.580037" elapsed="0.017522"/>
 </if>
-<status status="PASS" start="2024-11-21T17:09:32.580972" elapsed="0.024003"/>
+<status status="PASS" start="2024-11-22T16:34:09.579041" elapsed="0.018518"/>
 </kw>
-<kw name="And The user scrolls element into view">
-<kw name="Scroll To" owner="Browser">
-<msg time="2024-11-21T17:09:32.623971" level="INFO">JavaScript executed successfully.</msg>
-<msg time="2024-11-21T17:09:32.624971" level="INFO">JavaScript executed successfully.</msg>
-<msg time="2024-11-21T17:09:32.638977" level="INFO">JavaScript executed successfully.</msg>
-<msg time="2024-11-21T17:09:32.639974" level="INFO">JavaScript executed successfully.</msg>
-<msg time="2024-11-21T17:09:32.645983" level="INFO">JavaScript executed successfully.</msg>
-<arg>${string}</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Scrolls an element or the page to an absolute position based on given coordinates.</doc>
-<status status="PASS" start="2024-11-21T17:09:32.605969" elapsed="0.040014"/>
-</kw>
-<status status="PASS" start="2024-11-21T17:09:32.605969" elapsed="0.041015"/>
-</kw>
-<kw name="And The user verifies if privacy button is visible" source_name="The user verifies if ${string} ${second} is ${state}">
+<kw name="And The user verifies if aboutUs button is visible" source_name="The user verifies if ${string} ${second} is ${state}">
 <if>
 <branch type="IF" condition="&quot;${second}&quot; == &quot;page&quot;">
 <kw name="Wait For Elements State" owner="Browser">
@@ -174,27 +159,27 @@
 <tag>PageContent</tag>
 <tag>Wait</tag>
 <doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="NOT RUN" start="2024-11-21T17:09:32.648982" elapsed="0.000000"/>
+<status status="NOT RUN" start="2024-11-22T16:34:09.600558" elapsed="0.000000"/>
 </kw>
-<status status="NOT RUN" start="2024-11-21T17:09:32.648982" elapsed="0.001002"/>
+<status status="NOT RUN" start="2024-11-22T16:34:09.599568" elapsed="0.000990"/>
 </branch>
 <branch type="ELSE">
 <kw name="Wait For Elements State" owner="Browser">
-<msg time="2024-11-21T17:09:32.661501" level="INFO">Waited for Element with selector //a[@href="/privacy-policy"] at state visible</msg>
+<msg time="2024-11-22T16:34:09.611559" level="INFO">Waited for Element with selector //a[contains(text(),'About Us')] at state visible</msg>
 <arg>${${string}_button}</arg>
 <arg>${state}</arg>
 <tag>PageContent</tag>
 <tag>Wait</tag>
 <doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2024-11-21T17:09:32.649984" elapsed="0.012516"/>
+<status status="PASS" start="2024-11-22T16:34:09.601565" elapsed="0.009994"/>
 </kw>
-<status status="PASS" start="2024-11-21T17:09:32.649984" elapsed="0.012516"/>
+<status status="PASS" start="2024-11-22T16:34:09.601565" elapsed="0.009994"/>
 </branch>
-<status status="PASS" start="2024-11-21T17:09:32.648982" elapsed="0.013518"/>
+<status status="PASS" start="2024-11-22T16:34:09.599568" elapsed="0.011991"/>
 </if>
-<status status="PASS" start="2024-11-21T17:09:32.647983" elapsed="0.014517"/>
+<status status="PASS" start="2024-11-22T16:34:09.599568" elapsed="0.012995"/>
 </kw>
-<kw name="And The user clicks on the privacy button" source_name="The user clicks on the ${string} button">
+<kw name="And The user clicks on the aboutUs button" source_name="The user clicks on the ${string} button">
 <if>
 <branch type="IF" condition="&quot;${string}&quot; == &quot;jobOpenings&quot;">
 <kw name="Click" owner="Browser">
@@ -202,28 +187,227 @@
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="NOT RUN" start="2024-11-21T17:09:32.676498" elapsed="0.000000"/>
+<status status="NOT RUN" start="2024-11-22T16:34:09.615560" elapsed="0.000000"/>
 </kw>
-<status status="NOT RUN" start="2024-11-21T17:09:32.675500" elapsed="0.000998"/>
+<status status="NOT RUN" start="2024-11-22T16:34:09.614561" elapsed="0.000999"/>
 </branch>
 <branch type="ELSE">
 <kw name="Click" owner="Browser">
-<msg time="2024-11-21T17:09:32.677499" level="INFO">Clicks the element '//a[@href="/privacy-policy"]'.</msg>
+<msg time="2024-11-22T16:34:09.616560" level="INFO">Clicks the element '//a[contains(text(),'About Us')]'.</msg>
 <arg>${${string}_button}</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" start="2024-11-21T17:09:32.676498" elapsed="1.189125"/>
+<status status="PASS" start="2024-11-22T16:34:09.616560" elapsed="0.220271"/>
 </kw>
-<status status="PASS" start="2024-11-21T17:09:32.676498" elapsed="1.189125"/>
+<status status="PASS" start="2024-11-22T16:34:09.615560" elapsed="0.221271"/>
 </branch>
-<status status="PASS" start="2024-11-21T17:09:32.675500" elapsed="1.191122"/>
+<status status="PASS" start="2024-11-22T16:34:09.614561" elapsed="0.222270"/>
 </if>
-<status status="PASS" start="2024-11-21T17:09:32.675500" elapsed="1.191122"/>
+<status status="PASS" start="2024-11-22T16:34:09.614561" elapsed="0.222270"/>
 </kw>
-<status status="PASS" start="2024-11-21T17:09:26.087318" elapsed="7.781308"/>
+<kw name="And The user verifies if aboutUs page is visible" source_name="The user verifies if ${string} ${second} is ${state}">
+<if>
+<branch type="IF" condition="&quot;${second}&quot; == &quot;page&quot;">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2024-11-22T16:34:10.689267" level="INFO">Waited for Element with selector id=block-sas-2017-content at state visible</msg>
+<arg>${${string}_page}</arg>
+<arg>${state}</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2024-11-22T16:34:09.838826" elapsed="0.851440"/>
+</kw>
+<status status="PASS" start="2024-11-22T16:34:09.838826" elapsed="0.852444"/>
+</branch>
+<branch type="ELSE">
+<kw name="Wait For Elements State" owner="Browser">
+<arg>${${string}_button}</arg>
+<arg>${state}</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="NOT RUN" start="2024-11-22T16:34:10.691270" elapsed="0.000995"/>
+</kw>
+<status status="NOT RUN" start="2024-11-22T16:34:10.691270" elapsed="0.000995"/>
+</branch>
+<status status="PASS" start="2024-11-22T16:34:09.838826" elapsed="0.853439"/>
+</if>
+<status status="PASS" start="2024-11-22T16:34:09.837824" elapsed="0.854441"/>
+</kw>
+<kw name="And The user verifies if amos button is visible" source_name="The user verifies if ${string} ${second} is ${state}">
+<if>
+<branch type="IF" condition="&quot;${second}&quot; == &quot;page&quot;">
+<kw name="Wait For Elements State" owner="Browser">
+<arg>${${string}_page}</arg>
+<arg>${state}</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="NOT RUN" start="2024-11-22T16:34:10.703268" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-11-22T16:34:10.702262" elapsed="0.001006"/>
+</branch>
+<branch type="ELSE">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2024-11-22T16:34:10.713263" level="INFO">Waited for Element with selector //a[@href="/amos-mro"] at state visible</msg>
+<arg>${${string}_button}</arg>
+<arg>${state}</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2024-11-22T16:34:10.704267" elapsed="0.009999"/>
+</kw>
+<status status="PASS" start="2024-11-22T16:34:10.704267" elapsed="0.011003"/>
+</branch>
+<status status="PASS" start="2024-11-22T16:34:10.702262" elapsed="0.013008"/>
+</if>
+<status status="PASS" start="2024-11-22T16:34:10.700261" elapsed="0.015009"/>
+</kw>
+<kw name="And The user clicks on the amos button" source_name="The user clicks on the ${string} button">
+<if>
+<branch type="IF" condition="&quot;${string}&quot; == &quot;jobOpenings&quot;">
+<kw name="Click" owner="Browser">
+<arg>${${string}_button}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="NOT RUN" start="2024-11-22T16:34:10.720263" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-11-22T16:34:10.720263" elapsed="0.000999"/>
+</branch>
+<branch type="ELSE">
+<kw name="Click" owner="Browser">
+<msg time="2024-11-22T16:34:10.722260" level="INFO">Clicks the element '//a[@href="/amos-mro"]'.</msg>
+<arg>${${string}_button}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-11-22T16:34:10.721262" elapsed="0.230076"/>
+</kw>
+<status status="PASS" start="2024-11-22T16:34:10.721262" elapsed="0.230076"/>
+</branch>
+<status status="PASS" start="2024-11-22T16:34:10.720263" elapsed="0.231075"/>
+</if>
+<status status="PASS" start="2024-11-22T16:34:10.719263" elapsed="0.233076"/>
+</kw>
+<kw name="And The user verifies if amos page is visible" source_name="The user verifies if ${string} ${second} is ${state}">
+<if>
+<branch type="IF" condition="&quot;${second}&quot; == &quot;page&quot;">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2024-11-22T16:34:11.098685" level="INFO">Waited for Element with selector //div[contains(text(),'An MRO')] at state visible</msg>
+<arg>${${string}_page}</arg>
+<arg>${state}</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2024-11-22T16:34:10.962337" elapsed="0.137347"/>
+</kw>
+<status status="PASS" start="2024-11-22T16:34:10.961338" elapsed="0.140348"/>
+</branch>
+<branch type="ELSE">
+<kw name="Wait For Elements State" owner="Browser">
+<arg>${${string}_button}</arg>
+<arg>${state}</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="NOT RUN" start="2024-11-22T16:34:11.101686" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-11-22T16:34:11.101686" elapsed="0.001004"/>
+</branch>
+<status status="PASS" start="2024-11-22T16:34:10.961338" elapsed="0.141352"/>
+</if>
+<status status="PASS" start="2024-11-22T16:34:10.961338" elapsed="0.141352"/>
+</kw>
+<kw name="And The user verifies if customers button is visible" source_name="The user verifies if ${string} ${second} is ${state}">
+<if>
+<branch type="IF" condition="&quot;${second}&quot; == &quot;page&quot;">
+<kw name="Wait For Elements State" owner="Browser">
+<arg>${${string}_page}</arg>
+<arg>${state}</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="NOT RUN" start="2024-11-22T16:34:11.114685" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-11-22T16:34:11.113690" elapsed="0.000995"/>
+</branch>
+<branch type="ELSE">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2024-11-22T16:34:11.135689" level="INFO">Waited for Element with selector //a[@href="/customers"] at state visible</msg>
+<arg>${${string}_button}</arg>
+<arg>${state}</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2024-11-22T16:34:11.115684" elapsed="0.021005"/>
+</kw>
+<status status="PASS" start="2024-11-22T16:34:11.115684" elapsed="0.021005"/>
+</branch>
+<status status="PASS" start="2024-11-22T16:34:11.113690" elapsed="0.022999"/>
+</if>
+<status status="PASS" start="2024-11-22T16:34:11.113690" elapsed="0.022999"/>
+</kw>
+<kw name="And The user clicks on the customers button" source_name="The user clicks on the ${string} button">
+<if>
+<branch type="IF" condition="&quot;${string}&quot; == &quot;jobOpenings&quot;">
+<kw name="Click" owner="Browser">
+<arg>${${string}_button}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="NOT RUN" start="2024-11-22T16:34:11.159701" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-11-22T16:34:11.158703" elapsed="0.000998"/>
+</branch>
+<branch type="ELSE">
+<kw name="Click" owner="Browser">
+<msg time="2024-11-22T16:34:11.160701" level="INFO">Clicks the element '//a[@href="/customers"]'.</msg>
+<arg>${${string}_button}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-11-22T16:34:11.159701" elapsed="0.233669"/>
+</kw>
+<status status="PASS" start="2024-11-22T16:34:11.159701" elapsed="0.234669"/>
+</branch>
+<status status="PASS" start="2024-11-22T16:34:11.158703" elapsed="0.235667"/>
+</if>
+<status status="PASS" start="2024-11-22T16:34:11.158703" elapsed="0.235667"/>
+</kw>
+<kw name="Then The user verifies if customers page is visible" source_name="The user verifies if ${string} ${second} is ${state}">
+<if>
+<branch type="IF" condition="&quot;${second}&quot; == &quot;page&quot;">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2024-11-22T16:34:11.448367" level="INFO">Waited for Element with selector //*[contains(text(),'Loyal AMOS community')] at state visible</msg>
+<arg>${${string}_page}</arg>
+<arg>${state}</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2024-11-22T16:34:11.396369" elapsed="0.051998"/>
+</kw>
+<status status="PASS" start="2024-11-22T16:34:11.395367" elapsed="0.053999"/>
+</branch>
+<branch type="ELSE">
+<kw name="Wait For Elements State" owner="Browser">
+<arg>${${string}_button}</arg>
+<arg>${state}</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="NOT RUN" start="2024-11-22T16:34:11.449366" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-11-22T16:34:11.449366" elapsed="0.001000"/>
+</branch>
+<status status="PASS" start="2024-11-22T16:34:11.395367" elapsed="0.054999"/>
+</if>
+<status status="PASS" start="2024-11-22T16:34:11.395367" elapsed="0.054999"/>
+</kw>
+<status status="PASS" start="2024-11-22T16:34:03.432822" elapsed="8.024559"/>
 </test>
-<status status="PASS" start="2024-11-21T17:09:25.733604" elapsed="8.315117"/>
+<status status="PASS" start="2024-11-22T16:34:03.044487" elapsed="8.671168"/>
 </suite>
 <statistics>
 <total>
