@@ -1,10 +1,12 @@
 *** Settings ***
 Library    Browser
+Library    RequestsLibrary
 
 *** Variables ***
 ${URL}                       https://www.swiss-as.com
 ${BROWSER}                   chromium
-${string}                    
+${string}   
+${response}                 
 ### Homepage
 ${cookies_button}            //button[contains(text(),'Accept all cookies')]
 ${home_page}                 .main-logo
@@ -432,6 +434,16 @@ Scenario 21: Navigate to Customers Portal
     And The user verifies if customers button is visible
     And the user clicks on the customers button
 
+Scenario 22: Make API calls
+    Given A browser has been opened
+    When The user navigates to the Swiss Aviation Software page
+    And The user verifies if cookies button is visible
+    And The user clicks on the cookies button
+    And The user verifies if home page is visible
+    And The user makes calls to the API
+  
+
+
 
 *** Keywords ***
 #Set Navigation Timeout
@@ -468,4 +480,11 @@ The user scrolls element into view
     Scroll To   ${string}
 
 The user goes back to home page
-    Go Back    
+    Go Back 
+
+The user makes calls to the API
+    Create Session    swiss_as    https://www.swiss-as.com
+    ${response}=    POST On Session    swiss_as    /core/modules/statistics/statistics.php
+    Should Be Equal As Strings    ${response.status_code}    200
+
+
