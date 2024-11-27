@@ -5,8 +5,19 @@ Library    RequestsLibrary
 *** Variables ***
 ${URL}                       https://www.swiss-as.com
 ${BROWSER}                   chromium
-${string}   
-${response}                 
+${string} 
+${response}  
+${endpoint}       /core/modules/statistics/statistics.php
+${headers}        {"X-Requested-With": "XMLHttpRequest"}
+${cookies}        {"cookie-agreed": "2", "cookie-agreed-version": "1.0.0", "cookie-agreed-categories": "[\"strictly_necessary_cookies\"]"}
+${query_params}    nid"76"
+
+
+#${payload}        nid=""
+
+
+
+
 ### Homepage
 ${cookies_button}            //button[contains(text(),'Accept all cookies')]
 ${home_page}                 .main-logo
@@ -434,14 +445,22 @@ Scenario 21: Navigate to Customers Portal
     And The user verifies if customers button is visible
     And the user clicks on the customers button
 
-Scenario 22: Make API calls
+Scenario 22: Make API call
     Given A browser has been opened
     When The user navigates to the Swiss Aviation Software page
     And The user verifies if cookies button is visible
     And The user clicks on the cookies button
     And The user verifies if home page is visible
-    And The user makes calls to the API
+    And The user makes statistics call to the API
   
+
+Scenario 23: Make API calls
+    Given A browser has been opened
+    When The user navigates to the Swiss Aviation Software page
+    And The user verifies if cookies button is visible
+    And The user clicks on the cookies button
+    And The user verifies if home page is visible
+    And The user makes API call
 
 
 
@@ -482,9 +501,16 @@ The user scrolls element into view
 The user goes back to home page
     Go Back 
 
-The user makes calls to the API
+The user makes statistics call to the API
     Create Session    swiss_as    https://www.swiss-as.com
     ${response}=    POST On Session    swiss_as    /core/modules/statistics/statistics.php
     Should Be Equal As Strings    ${response.status_code}    200
 
+The user makes API call
+    Create Session     mysession    ${URL}    headers=${headers}    cookies=${cookies}
+    ${query_params} Evaluate    int("${query_params}")
+    ${response}  GET On Session  mysession  ${endpoint}?${query_params}
+    Log  ${response}
+    Should Be Equal As Strings    ${response.status_code}    200
+    Run Keyword If     "desired_value" in ${response.text}    Log    Found desired value in response
 
