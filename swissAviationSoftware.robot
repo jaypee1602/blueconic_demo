@@ -479,6 +479,15 @@ Scenario 25: Make Get Image API call
     And The user verifies if home page is visible
     And The user makes Get image API call
 
+Scenario 26: Make Get Title Logos Image API call
+    Given A browser has been opened
+    When The user navigates to the Swiss Aviation Software page
+    And The user verifies if cookies button is visible
+    And The user clicks on the cookies button
+    And The user verifies if home page is visible
+    And The user makes Title Logos image API call
+    
+
 
 
 
@@ -489,8 +498,8 @@ Scenario 25: Make Get Image API call
 
 A browser has been opened
     New Browser    chromium    headless=False
-    New Page  ${URL}
-    Go To    ${URL} 
+    New Page   ${URL}
+    Go To    ${URL}  
     Wait For Load State    state=load
        
 
@@ -541,6 +550,14 @@ The user makes serivces API post request
 The user makes Get image API call
     Create Session    swiss_as    https://www.swiss-as.com
     ${response}=    GET On Session    swiss_as    url=/sites/default/files/styles/tile_third/public/tiles/2017/10/Exhibition_booth.jpg?itok=4zywGFP-
+    Should Be Equal As Strings    ${response.status_code}    200
+    Log    GET Response Content Length: ${response.headers['Content-Length']}
+    Log    GET Response Content Type: ${response.headers['Content-Type']}
+    Log    GET Response: Transferred ${response.headers.get('Transferred', 'Unknown size')} bytes
+
+The user makes Title Logos image API call
+    Create Session    swiss_as    https://www.swiss-as.com
+     ${response}=    GET On Session    swiss_as    /sites/default/files/styles/tile_third/public/tiles/2017/09/Title_Logos.png?itok=ycBUb5vK
     Should Be Equal As Strings    ${response.status_code}    200
     Log    GET Response Content Length: ${response.headers['Content-Length']}
     Log    GET Response Content Type: ${response.headers['Content-Type']}
