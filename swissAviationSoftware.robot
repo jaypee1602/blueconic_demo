@@ -315,6 +315,7 @@ Scenario 13.1: Browse news and events - News
     And The user verifies if news button is visible
     And The user clicks on the news button 
 
+
 Scenario 13.2: Browse news and events - Events
     Given A browser has been opened
     When The user navigates to the Swiss Aviation Software page
@@ -454,13 +455,30 @@ Scenario 22: Make API call
     And The user makes statistics call to the API
   
 
-Scenario 23: Make API calls
+Scenario 23: Make services API calls
     Given A browser has been opened
     When The user navigates to the Swiss Aviation Software page
     And The user verifies if cookies button is visible
     And The user clicks on the cookies button
     And The user verifies if home page is visible
-    And The user makes API call
+    And The user makes serivces API call
+
+Scenario 24: Make services API post request
+    Given A browser has been opened
+    When The user navigates to the Swiss Aviation Software page
+    And The user verifies if cookies button is visible
+    And The user clicks on the cookies button
+    And The user verifies if home page is visible
+    And The user makes serivces API post request
+
+Scenario 25: Make Get Image API call
+    Given A browser has been opened
+    When The user navigates to the Swiss Aviation Software page
+    And The user verifies if cookies button is visible
+    And The user clicks on the cookies button
+    And The user verifies if home page is visible
+    And The user makes Get image API call
+
 
 
 
@@ -506,11 +524,24 @@ The user makes statistics call to the API
     ${response}=    POST On Session    swiss_as    /core/modules/statistics/statistics.php
     Should Be Equal As Strings    ${response.status_code}    200
 
-The user makes API call
-    Create Session     mysession    ${URL}    headers=${headers}    cookies=${cookies}
-    ${query_params} Evaluate    int("${query_params}")
-    ${response}  GET On Session  mysession  ${endpoint}?${query_params}
-    Log  ${response}
+The user makes serivces API call
+    Create Session    swiss_as    https://www.swiss-as.com
+    ${response}=    GET On Session    swiss_as    /services
     Should Be Equal As Strings    ${response.status_code}    200
-    Run Keyword If     "desired_value" in ${response.text}    Log    Found desired value in response
+    Log    Response Body: ${response.text}
 
+
+
+The user makes serivces API post request
+    Create Session    swiss_as    https://www.swiss-as.com
+    ${response}=    POST On Session    swiss_as    /core/modules/statistics/statistics.php
+    Should Be Equal As Strings    ${response.status_code}    200
+    Log    POST Response Body: ${response.text}
+
+The user makes Get image API call
+    Create Session    swiss_as    https://www.swiss-as.com
+    ${response}=    GET On Session    swiss_as    url=/sites/default/files/styles/tile_third/public/tiles/2017/10/Exhibition_booth.jpg?itok=4zywGFP-
+    Should Be Equal As Strings    ${response.status_code}    200
+    Log    GET Response Content Length: ${response.headers['Content-Length']}
+    Log    GET Response Content Type: ${response.headers['Content-Type']}
+    Log    GET Response: Transferred ${response.headers.get('Transferred', 'Unknown size')} bytes
